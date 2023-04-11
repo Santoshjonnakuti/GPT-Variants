@@ -7,21 +7,21 @@
 <body>
     <div class="d-flex flex-grow flex-column align-items-center p-2" style="height:100vh">
         <div class="d-flex justify-content-center" style="width:60%">
-            <h1>Image GPT </h1>
+            <h1>Audio GPT </h1>
         </div>
         <div style="width:60%" class="border border-secondary rounded-3 p-3">
             <form method="POST" enctype="multipart/form-data" class="d-flex justify-content-center">
                 <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
-                    placeholder="Describe about the Image to Generate" name="input">
+                    <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                    placeholder="Describe about the Image to Generate" name="file">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg m-2">Generate</button>
               </form>
         </div>
         <div style="width:60%" class="border border-secondary rounded-3 p-3">
-            <h1>Generated Image</h1>
-            {% if url %}
-                <img src="{{url}}" style="max-height:100%" width="50%" alt="Generated Image">
+            <h1>Generated Transcript</h1>
+            {% if text %}
+                <p> {{text}} </p>
             {% endif %}
         </div>
     </div>
