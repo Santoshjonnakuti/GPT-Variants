@@ -11,7 +11,7 @@ import speech_recognition as sr
 load_dotenv()
 # Set up OpenAI API credentials
 
-api_key = os.environ.get('Ajay_KEY')
+api_key = os.environ.get('OPENAI_KEY')
 
 app = Flask(__name__)
 
