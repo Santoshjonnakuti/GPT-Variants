@@ -9,21 +9,23 @@
         <div class="d-flex justify-content-center" style="width:60%">
             <h1>Audio GPT </h1>
         </div>
-        <div style="width:60%" class="border border-secondary rounded-3 p-3">
+        <a href="/" class="btn btn-lg btn-secondary ms-2" style="position:fixed;left:0;top:10;" >Home</a>
+        <div style="width:60%" class="border border-secondary rounded-3 p-3 m-2">
             <form method="POST" enctype="multipart/form-data" class="d-flex justify-content-center">
                 <div class="input-group input-group-lg">
                     <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
-                    placeholder="Describe about the Image to Generate" name="file">
+                    placeholder="" name="file">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg m-2">Generate</button>
               </form>
+              <p class="m-2">Upload Audio to convert that into text</p>
         </div>
-        <div style="width:60%" class="border border-secondary rounded-3 p-3">
-            <h1>Generated Transcript</h1>
-            {% if text %}
-                <p> {{text}} </p>
-            {% endif %}
-        </div>
+        {% if text %}
+            <div style="width:60%" class="border border-secondary rounded-3 p-3 m-2">
+                <h1>Generated Transcript</h1>
+                    <p> {{text}} </p>
+            </div>
+        {% endif %}
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
