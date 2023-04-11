@@ -133,13 +133,13 @@ def audioToImage():
 @app.route("/translate-gpt", methods=["GET", "POST"])
 def tranlateGPT():
   if request.method == 'GET':
-    return render_template('tranlationgpt.html')
+    return render_template('translationgpt.html')
   prompt = request.files['file']
   print(prompt.filename)
   prompt.save(prompt.filename)
   audio_file = open(prompt.filename, "rb")
   transcript = openai.Audio.translate("whisper-1", audio_file)
-  return render_template("tranlationgpt.html", text=transcript['text'])
+  return render_template("translationgpt.html", text=transcript['text'])
 
 if __name__ == '__main__':
     app.run(debug=True, port=8088)
