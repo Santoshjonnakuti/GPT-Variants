@@ -14,11 +14,11 @@
             <form method="POST" enctype="multipart/form-data" class="d-flex flex-column justify-content-center">
                 <div class="input-group input-group-lg m-2">
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
-                    placeholder="Describe about the Image to Generate" name="input">
+                    placeholder="Describe about the Image to Generate" name="input" value="{{inputValue}}">
                 </div>
                 <div class="input-group input-group-lg m-2">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
-                    placeholder="OpenAI API Key" name="apiKey">
+                    <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                    placeholder="OpenAI API Key" name="apiKey" value={{api_key}}>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary btn-lg m-2">Generate</button>
