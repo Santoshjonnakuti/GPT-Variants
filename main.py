@@ -195,4 +195,4 @@ def tranlateGPT():
   return render_template("translationgpt.html", text=text, inputValue=prompt, api_key=api_key, error=error)
 
 if __name__ == '__main__':
-  app.run(debug=True, port=8088, host='0.0.0.0')
+  app.run(debug=False, port=8088, host='0.0.0.0')
